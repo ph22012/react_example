@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { HTMLAttributes } from 'react'
+import UserCard from '@/components/UserCard';
 
 interface IUsuario {
   id: number;
@@ -55,16 +56,7 @@ const Example1 = () => {
         users.map(
           (user, index) => {
             return (
-              <div key = {user.id} className='flex flex-row gap-4 border border-gray-300 rounded-lg overflow-hidden w-96'>
-                <div className=' aspect-square w-32'>
-                  <Image width={128} height={128} className=' object-cover w-full h-full' src={user.picture} alt={`User photo of ${user.firstName} ${user.lastName}`} />
-                </div>
-                <div className='flex flex-col justify-center'>
-                  <span><span className='font-bold'>Nombre:</span> {user.firstName}</span>
-                  <span><span className='font-bold'>Apellido:</span> {user.lastName}</span>
-                  <span><span className='font-bold'>Rol:</span> {user.role}</span>
-                </div>
-              </div>
+             UserCard(user)
             )
           }
         )
