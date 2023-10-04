@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import React, { HTMLAttributes } from 'react'
 import UserCard from '@/components/UserCard';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Ejemplo 1',
+}
 interface IUsuario {
   id: number;
   firstName: string;
