@@ -2,16 +2,16 @@ import Image from 'next/image';
 import React from "react";
 
 interface IUsuario {
-    id: number;
     firstName: string;
     lastName: string;
     picture: string;
     role: 'Admin' | 'Client';
   }
 
+
 const UserCard = (user:IUsuario) =>{
     return(
-        <div key = {user.id} className='flex flex-row gap-4 border border-gray-300 rounded-lg overflow-hidden w-96'>
+        <div className='flex flex-row gap-4 border border-gray-300 rounded-lg overflow-hidden w-96'>
             <div className='aspect-square w-32'>
                 <Image width={128} height={128} className=' object-cover w-full h-full' src={user.picture} alt={`User photo of ${user.firstName} ${user.lastName}`} />
             </div>
