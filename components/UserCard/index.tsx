@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from "react";
 
-interface IUsuario {
+export interface IUsuario {
     firstName: string;
     lastName: string;
     picture: string;
