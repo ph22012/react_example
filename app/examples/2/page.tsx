@@ -15,7 +15,7 @@ const Example2 = () => {
   const [role, setRole] = useState<TRoles>('Client')
   const [picture, setPicture] = useState('')
   const [terms, setTerms] = useState(false)
-  const [users, setUser] = useState<IUsuario[]>([])
+  const [users, setUser] = useState<IUsuarios[]>([])
 
   const handleNameOnChange = (event:ChangeEvent<HTMLInputElement>) => {
     setFirstName(event.currentTarget.value)
@@ -84,7 +84,7 @@ const Example2 = () => {
         users.map(
           (user, index) => {
             return (
-             UserCard(user)
+            <UserCard {... user} key = {user.id}/>
             )
           }
         )
